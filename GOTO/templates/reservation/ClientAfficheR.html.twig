@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+{% block title %}Afficher Resrvation{% endblock %}
+
+{% block main %}
+
+    <div class="hero_single version_2" >
+    <div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">   {# <div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)"> #}
+        <div class="bg_gray pattern" id="submit">
+            <div class="container margin_30_40">
+                <div class="row justify-content-center">
+                    <div class="col-lg-auto">
+                        <h2>Mes Réservations</h2>
+                        <form method="post" action="{{ path('rechercheR') }}">
+                            <label>Date</label>
+                            <input type="text" name="searchR" placeholder="yyyy/mm/jj"><input type="submit" value="Recherche">
+                        </form>
+                        <br>
+                        <table border=1 >
+                            <tr>
+                                <th>Id</th>
+                                <th>Lieu</th>
+                                <th>Date</th>
+                                <th>Heure</th>
+                                <th>Nb Personnes</th>
+                                <th>Nb Bebes</th>
+                                <th>Vip</th>
+                                <th>Statut</th>
+                                <th>Delete</th>
+                                <th>Update</th>
+                            </tr>
+                            <tr {% for r in reservation %}>
+                                <td>{{ r.id }}</td>
+                                <td>{{ r.lieu.nom }}</td>
+                                <td>{{ r.date|date('d/m/Y')}}</td>
+                                <td>{{ r.heure|date('H:i') }}</td>
+                                <td>{{ r.nbrpersonnes  }}</td>
+                                <td>{{ r.nbrbebes  }}</td>
+                                <td>{{ r.vip ? 'Oui': 'Non' }}</td>
+                                <td>{{ r.statut  }}</td>
+                                <td><a href="{{ path('dR',{'id':r.id}) }}">Delete</a></td>
+                             <td><a href="{{ path('updateR',{'id':r.id}) }}">Update</a></td>
+                            <tr {% endfor %}
+                            </tr>
+                        </table>
+
+                        <td><a href="{{ path('ClientAddR')}}">Add</a></td>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

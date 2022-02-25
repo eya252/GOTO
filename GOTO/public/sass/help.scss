@@ -1,0 +1,92 @@
+@import 'variables';
+@import 'mixin'; 
+
+a.box_topic {
+	text-align: center;
+	background: #fff;
+	padding: 40px 30px 15px 30px;
+	@include mobile {padding: 20px 20px 0 20px;}
+	display: block;
+	@include transition-default;
+	@include box-shadow (0px 0px 15px 0px rgba(0, 0, 0, 0.05));
+	color: $body-text-color;
+	margin-bottom: 30px;
+	overflow: hidden;
+	@include border-radius(5px);
+	&:hover {
+		@include transform (translateY(-10px));
+	}
+	i {
+		@include fontSize(60px);
+		color: $color-1;
+		display: block;
+		margin: 0 auto 15px;
+	}
+	h3 {
+		@include fontSize(18px);
+	}
+}
+
+.list_articles {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding:0;
+		li {
+			float: left;
+			width: 45%;
+			margin-right: 45px;
+			padding: 15px 0;
+			border-bottom: 1px solid $border-color-2;
+			a {
+				color: $body-text-color;
+				display: block;
+				&:hover {
+					color: $color-1;
+					@include transform (translateX(5px));
+				}
+			}
+			i {
+				margin-right: 10px;
+				@include fontSize(16px);
+				position: relative;
+				top: 2px;
+			}
+			@include tablet {
+				float: none;
+				width: 100%;
+				margin-right: 0;
+			}
+		}
+	}
+}
+.search_bar {
+	position: relative;
+	margin-bottom: 60px;
+	input[type='text'] {
+		border: 0;
+		height: 50px;
+		@include border-radius(3px);
+		padding-left: 15px;
+		@include box-shadow (0px 0px 50px 0px rgba(0, 0, 0, 0.15));
+	}
+	input[type='submit'] {
+		position: absolute;
+		right: -1px;
+		color: #fff;
+		font-weight: 600;
+		top: 0;
+		border: 0;
+		padding: 0 25px;
+		height: 50px;
+		cursor: pointer;
+		@include border-radius(0 3px 3px 0);
+		background-color: $color-1;
+		@include transition-default;
+		&:focus {outline: none;}
+		&:hover {
+		-webkit-filter: brightness(115%);
+		filter: brightness(115%);
+	}
+	}
+}

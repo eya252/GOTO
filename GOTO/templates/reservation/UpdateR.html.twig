@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+{% block title %}Mettre à jour  Reservations{% endblock %}
+{% block main %}
+
+    <div class="bg_gray pattern" id="submit">
+        <div class="container margin_60_40">
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <div class="text-center add_bottom_15">
+                        <h2>Mettre à jour une reservation </h2>
+                    </div>
+                    {{ form(f) }}
+                    {#
+                    <div id="message-register"></div>
+
+                    <form method="post" action="updateR" id="register">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    {{ form_row(f.Date) }}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /row -->
+                        <div class="row add_bottom_15">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    {{ form_row(f.Heure) }}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /row -->
+                        <div class="row add_bottom_15">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    {{ form_row(f.Nbrpersonnes) }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- /row -->
+                        <div class="row add_bottom_15">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    {{ form_row(f.Vip) }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- /row -->
+                        <div class="row add_bottom_15">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    {{ form_row(f.Nbrbebes) }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- /row -->
+                        <div class="row add_bottom_15">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    {{ form_row(f.Statut) }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- /row -->
+                        <div class="row add_bottom_15">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    {{ form_row(f.lieu) }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- /row -->
+                        <div class="row add_bottom_15">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    {{ form(f)}}
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /row -->
+
+                    </form>
+                    #}
+                </div>
+            </div>
+            <!-- /container -->
+        </div>
+    </div>
+{% endblock %}
+

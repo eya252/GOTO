@@ -1,0 +1,172 @@
+{% extends 'admin.html.twig' %}
+{% block title %} Goto Bookings {% endblock %}
+
+{% block admin_body %}
+<body class="fixed-nav sticky-footer" id="page-top">
+{% endblock %}
+
+{% block content %}
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href={{ asset('#') }}>Dashboard</a>
+                </li>
+                <li class="breadcrumb-item active">Bookings</li>
+            </ol>
+            <div class="box_general">
+                <div class="header_box">
+                    <h2 class="d-inline-block">Ajouter Reservation</h2>
+                    <div class="filter">
+                        <select name="orderby" class="selectbox">
+                            <option value="Any status">Any status</option>
+                            <option value="Approved">Approved</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                </div>
+                {# Adam: a charger avec la liste des reservations #}
+                <div class="list_general">
+                    {# Adam: insert la table  #}
+
+                    <div class="hero_single version_2">
+                        <div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
+                            <div class="bg_gray pattern" id= "submit">
+                                <div class="container margin_60_40">
+                                    <div class="row justify-content-center" align="left">
+                                        <div class="col-lg-5">
+
+                                            <form method="post" action="{{ asset('AdminAfficheR')}}" id="register">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group">
+                                                            {{ form_row(f.Date) }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /row -->
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group">
+                                                            {{ form_row(f.Heure) }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /row -->
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group">
+                                                            {{ form_row(f.Nbrpersonnes,{'label': 'Nbr Personnes' }) }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /row -->
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group">
+                                                            {{ form_row(f.Vip,{'label': 'VIP' }) }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /row -->
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group">
+                                                            {{ form_row(f.Nbrbebes,{'label': 'Nbr Bébés' }) }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /row -->
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group">
+                                                            {{ form_row(f.Statut,{'label': 'Statut' }) }}
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /row -->
+                                                <div class="row ">
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group">
+                                                            {{ form_row(f.lieu,{'label': 'Lieu de Restauration' }) }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /row -->
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group">
+                                                            {{ form(f)}}
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /row -->
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- /container -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                    <div class="hero_single inner_pages_2 background-image" data-background="{{ asset('url(img/hero_submit_perso.jpg')}}">
+                        <div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /box_general-->
+            <nav aria-label="...">
+                <ul class="pagination pagination-sm add_bottom_30">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="{{ asset('#') }}" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{ asset('#') }}">1</a></li>
+                    <li class="page-item"><a class="page-link" href="{{ asset('#') }}">2</a></li>
+                    <li class="page-item"><a class="page-link" href="{{ asset('#') }}">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{ asset('#') }}">Next</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /pagination-->
+        </div>
+        <!-- /container-fluid-->
+
+    <!-- /container-wrapper-->
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

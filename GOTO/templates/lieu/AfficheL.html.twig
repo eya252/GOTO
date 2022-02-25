@@ -1,0 +1,372 @@
+    {% extends 'admin.html.twig' %}
+    {% block title %} Goto Bookings {% endblock %}
+
+    {#
+    <header class="header_in clearfix">
+        <div class="container">
+            <div id="logo">
+                <a href="index.html">
+                    <img src="img/logo_sticky.svg" width="140" height="35" alt="">
+                </a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="#sign-in-dialog" id="sign-in" class="login">Sign In</a></li>
+                <li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
+            </ul>
+            <!-- /top_menu -->
+            <a href="#0" class="open_close">
+                <i class="icon_menu"></i><span>Menu</span>
+            </a>
+            <nav class="main-menu">
+                <div id="header_menu">
+                    <a href="#0" class="open_close">
+                        <i class="icon_close"></i><span>Menu</span>
+                    </a>
+                    <a href="index.html"><img src="img/logo.svg" width="140" height="35" alt=""></a>
+                </div>
+                <ul>
+                    <li class="submenu">
+                        <a href="#0" class="show-submenu">Home</a>
+                        <ul>
+                            <li><a href="index.html">Default</a></li>
+                            <li><a href="index-2.html">Video Background</a></li>
+                            <li><a href="index-3.html">Slider</a></li>
+                            <li><a href="index-4.html">GDPR Cookie Bar EU Law</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#0" class="show-submenu">Listing</a>
+                        <ul>
+                            <li class="third-level"><a href="#0">List pages</a>
+                                <ul>
+                                    <li><a href="grid-listing-filterscol.html">List default</a></li>
+                                    <li><a href="grid-listing-filterscol-map.html">List with map</a></li>
+                                    <li><a href="grid-listing-filterscol-full-width.html">List full width</a></li>
+                                    <li><a href="grid-listing-filterscol-full-masonry.html">List Masonry Filter</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="detail-restaurant.html">Detail page 1</a></li>
+                            <li><a href="detail-restaurant-2.html">Detail page 2</a></li>
+                            <li><a href="submit-restaurant.html">Submit Restaurant</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="admin_section/index.html" target="_blank">Admin Section</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#0" class="show-submenu">Other Pages</a>
+                        <ul>
+                            <li><a href="404.html">404 Error</a></li>
+                            <li><a href="confirm.html">Confirm Booking</a></li>
+                            <li><a href="help.html">Help and Faq</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="booking.html">Booking</a></li>
+                            <li><a href="leave-review.html">Leave a review</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="coming_soon/index.html">Coming Soon</a></li>
+                            <li><a href="account.html">Sign Up</a></li>
+                            <li><a href="icon-pack-1.html">Icon Pack 1</a></li>
+                            <li><a href="icon-pack-2.html">Icon Pack 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="submit-restaurant.html">Submit</a></li>
+                    <li><a href="#0">Buy this template</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- /header -->
+    #}
+    {% block admin_body %}
+    <body class="fixed-nav sticky-footer" id="page-top">
+    {% endblock %}
+    {#
+    {% block admin_navigtion %}
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top" id="mainNav">
+        <a class="navbar-brand" href="{{ asset('index.html') }}"><img src="{{ asset('admin_section/img/logo.svg') }}" data-retina="true" alt="" width="142" height="36"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                    <a class="nav-link" href="{{ asset('index.html') }}">
+                        <i class="fa fa-fw fa-dashboard"></i>
+                        <span class="nav-link-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Messages">
+                    <a class="nav-link" href="{{ asset('messages.html') }}">
+                        <i class="fa fa-fw fa-envelope-open"></i>
+                        <span class="nav-link-text">Messages</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="" data-original-title="Bookings">
+                    <a class="nav-link" href="{{ asset('bookings.html') }}">
+                        <i class="fa fa-fw fa-calendar-check-o"></i>
+                        <span class="nav-link-text">Bookings <span class="badge badge-pill badge-primary">6 New</span></span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My listings">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="{{ asset('#collapseMylistings') }}" data-parent="#mylistings">
+                        <i class="fa fa-fw fa-list"></i>
+                        <span class="nav-link-text">My listings</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseMylistings">
+                        <li>
+                            <a href="{{ asset('listings.html') }}">Pending <span class="badge badge-pill badge-primary">6</span></a>
+                        </li>
+                        <li>
+                            <a href="{{ asset('listings.html') }}">Active <span class="badge badge-pill badge-success">6</span></a>
+                        </li>
+                        <li>
+                            <a href="{{ asset('listings.html') }}">Expired <span class="badge badge-pill badge-danger">6</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reviews">
+                    <a class="nav-link" href="{{ asset('reviews.html') }}">
+                        <i class="fa fa-fw fa-star"></i>
+                        <span class="nav-link-text">Reviews</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Bookmarks">
+                    <a class="nav-link" href="{{ asset('bookmarks.html') }}">
+                        <i class="fa fa-fw fa-heart"></i>
+                        <span class="nav-link-text">Bookmarks</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Add listing">
+                    <a class="nav-link" href="{{ asset('add-listing.html') }}">
+                        <i class="fa fa-fw fa-plus-circle"></i>
+                        <span class="nav-link-text">Add listing</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My profile">
+                    <a class="nav-link" href="{{ asset('user-profile.html') }}">
+                        <i class="fa fa-fw fa-user"></i>
+                        <span class="nav-link-text">My Profile</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="{{ asset('#collapseComponents') }}" data-parent="#Components">
+                        <i class="fa fa-fw fa-gear"></i>
+                        <span class="nav-link-text">Components</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseComponents">
+                        <li>
+                            <a href="{{ asset('charts.html') }}">Charts</a>
+                        </li>
+                        <li>
+                            <a href="{{ asset('tables.html') }}">Tables</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="navbar-nav sidenav-toggler">
+                <li class="nav-item">
+                    <a class="nav-link text-center" id="sidenavToggler">
+                        <i class="fa fa-fw fa-angle-left"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="{{ asset('#') }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-envelope"></i>
+                        <span class="d-lg-none">Messages
+                  <span class="badge badge-pill badge-primary">12 New</span>
+                </span>
+                        <span class="indicator text-primary d-none d-lg-block">
+                  <i class="fa fa-fw fa-circle"></i>
+                </span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="messagesDropdown">
+                        <h6 class="dropdown-header">New Messages:</h6>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ asset('#') }}">
+                            <strong>David Miller</strong>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ asset('#') }}">
+                            <strong>Jane Smith</strong>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!</div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ asset('#') }}">
+                            <strong>John Doe</strong>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.</div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item small" href="{{ asset('#') }}">View all messages</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="{{ asset('#') }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-bell"></i>
+                        <span class="d-lg-none">Alerts
+                  <span class="badge badge-pill badge-warning">6 New</span>
+                </span>
+                        <span class="indicator text-warning d-none d-lg-block">
+                  <i class="fa fa-fw fa-circle"></i>
+                </span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="alertsDropdown">
+                        <h6 class="dropdown-header">New Alerts:</h6>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ asset('#') }}">
+                  <span class="text-success">
+                    <strong>
+                      <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+                  </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ asset('#') }}">
+                  <span class="text-danger">
+                    <strong>
+                      <i class="fa fa-long-arrow-down fa-fw"></i>Status Update</strong>
+                  </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ asset('#') }}">
+                  <span class="text-success">
+                    <strong>
+                      <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+                  </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item small" href="{{ asset('#') }}">View all alerts</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0 mr-lg-2">
+                        <div class="input-group">
+                            <input class="form-control search-top" type="text" placeholder="Search for...">
+                            <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </span>
+                        </div>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- /Navigation-->
+    {% endblock %}
+    #}
+    {% block content %}
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                <!-- Breadcrumbs-->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href={{ asset('#') }}>Dashboard</a>
+                    </li>
+                    <li class="breadcrumb-item active">Add listing</li>
+                </ol>
+                <div class="box_general">
+                    <div class="header_box">
+                        <h2 class="d-inline-block">Liste des Lieux</h2>
+                        <div class="filter">
+                            <select name="orderby" class="selectbox">
+                                <option value="Any status">Any status</option>
+                                <option value="Approved">Approved</option>
+                                <option value="Pending">Pending</option>
+                                <option value="Cancelled">Cancelled</option>
+                            </select>
+                        </div>
+                    </div>
+                    {# Adam: a charger avec la liste des reservations #}
+                    <div class="list_general">
+                        {# Adam: insert la table  #}
+
+                        <div class="hero_single version_2" >
+                            <div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">   {# <div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)"> #}
+                                <div class="bg_gray pattern" id="submit">
+                                    <div class="container margin_30_40">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-auto">
+                                                <h2>Liste des Lieux</h2>
+                                                <form method="post" action="{{ path('rechercheL') }}">
+                                                    <label>Recherche</label>
+                                                    <input type="text" name="searchL"><input type="submit" value="Recherche">
+                                                </form>
+                                                <br>
+                                                <table border=1 >
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Categorie</th>
+                                                        <th>Nom</th>
+                                                        <th>Description</th>
+                                                        <th>Menu</th>
+                                                        <th>Budget</th>
+                                                        <th>Update</th>
+                                                        <th>Delete</th>
+                                                    </tr>
+                                                    <tr {% for l in lieu  %}>
+                                                        <td>{{ l.id }}</td>
+                                                        <td>{{ l.categorie.type }}</td>
+                                                        <td>{{ l.nom }}</td>
+                                                        <td>{{ l.description }}</td>
+                                                        <td>{{ l.menu }}</td>
+                                                        <td>{{ l.budget }}</td>
+                                                        <td><a href="{{ path('updateL',{'id':l.id}) }}">Update</a></td>
+                                                        <td><a href="{{ path('dL',{'id':l.id}) }}">Delete</a></td>
+
+                                                    <tr {% endfor %}
+                                                    </tr>
+                                                </table>
+
+                                                <td><a href="{{ path('AddL') }}">AddL</a></td>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <!-- /box_general-->
+                <nav aria-label="...">
+                    <ul class="pagination pagination-sm add_bottom_30">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="{{ asset('#') }}" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="{{ asset('#') }}">1</a></li>
+                        <li class="page-item"><a class="page-link" href="{{ asset('#') }}">2</a></li>
+                        <li class="page-item"><a class="page-link" href="{{ asset('#') }}">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="{{ asset('#') }}">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /pagination-->
+            </div>
+            <!-- /container-fluid-->
+        </div>
+        <!-- /container-wrapper-->
+        </div>
+    {% endblock %}
+
+
+
+
+
+

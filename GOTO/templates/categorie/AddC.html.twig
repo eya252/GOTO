@@ -1,0 +1,263 @@
+    {% extends 'admin.html.twig' %}
+    {% block title %} Goto Bookings {% endblock %}
+
+    {#
+    <header class="header_in clearfix">
+        <div class="container">
+            <div id="logo">
+                <a href="index.html">
+                    <img src="img/logo_sticky.svg" width="140" height="35" alt="">
+                </a>
+            </div>
+            <ul id="top_menu">
+                <li><a href="#sign-in-dialog" id="sign-in" class="login">Sign In</a></li>
+                <li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
+            </ul>
+            <!-- /top_menu -->
+            <a href="#0" class="open_close">
+                <i class="icon_menu"></i><span>Menu</span>
+            </a>
+            <nav class="main-menu">
+                <div id="header_menu">
+                    <a href="#0" class="open_close">
+                        <i class="icon_close"></i><span>Menu</span>
+                    </a>
+                    <a href="index.html"><img src="img/logo.svg" width="140" height="35" alt=""></a>
+                </div>
+                <ul>
+                    <li class="submenu">
+                        <a href="#0" class="show-submenu">Home</a>
+                        <ul>
+                            <li><a href="index.html">Default</a></li>
+                            <li><a href="index-2.html">Video Background</a></li>
+                            <li><a href="index-3.html">Slider</a></li>
+                            <li><a href="index-4.html">GDPR Cookie Bar EU Law</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#0" class="show-submenu">Listing</a>
+                        <ul>
+                            <li class="third-level"><a href="#0">List pages</a>
+                                <ul>
+                                    <li><a href="grid-listing-filterscol.html">List default</a></li>
+                                    <li><a href="grid-listing-filterscol-map.html">List with map</a></li>
+                                    <li><a href="grid-listing-filterscol-full-width.html">List full width</a></li>
+                                    <li><a href="grid-listing-filterscol-full-masonry.html">List Masonry Filter</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="detail-restaurant.html">Detail page 1</a></li>
+                            <li><a href="detail-restaurant-2.html">Detail page 2</a></li>
+                            <li><a href="submit-restaurant.html">Submit Restaurant</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="admin_section/index.html" target="_blank">Admin Section</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a href="#0" class="show-submenu">Other Pages</a>
+                        <ul>
+                            <li><a href="404.html">404 Error</a></li>
+                            <li><a href="confirm.html">Confirm Booking</a></li>
+                            <li><a href="help.html">Help and Faq</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="booking.html">Booking</a></li>
+                            <li><a href="leave-review.html">Leave a review</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="coming_soon/index.html">Coming Soon</a></li>
+                            <li><a href="account.html">Sign Up</a></li>
+                            <li><a href="icon-pack-1.html">Icon Pack 1</a></li>
+                            <li><a href="icon-pack-2.html">Icon Pack 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="submit-restaurant.html">Submit</a></li>
+                    <li><a href="#0">Buy this template</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- /header -->
+    #}
+    {% block admin_body %}
+<body class="fixed-nav sticky-footer" id="page-top">
+{% endblock %}
+
+{% block content %}
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href={{ asset('#') }}>Dashboard</a>
+                </li>
+                <li class="breadcrumb-item active">Categories</li>
+            </ol>
+            <div class="box_general">
+                <div class="header_box">
+                    <h2 class="d-inline-block">Ajouter Catégorie</h2>
+                    <div class="filter">
+                        <select name="orderby" class="selectbox">
+                            <option value="Any status">Any status</option>
+                            <option value="Approved">Approved</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                </div>
+                {# Adam: a charger avec la liste des reservations #}
+                <div class="list_general">
+                    {# Adam: insert la table  #}
+
+                    <div class="hero_single inner_pages_2 background-image" data-background="{{ asset('url(img/hero_submit_perso.jpg')}}">
+                        <div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
+                        </div>
+                    </div>
+                    <div class="bg_gray pattern" id="submit">
+                        <div class="container margin_60_40">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-5">
+
+                                    <div id="message-register"></div>
+                                    <form method="post" action="AddC" id="register">
+
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    {{ form_row(f.Type) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /row -->
+                                        <div class="row add_bottom_15">
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    {{ form_row(f.Description) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /row -->
+
+                                        <!-- /row -->
+
+                                        <div class="row add_bottom_15">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    {{ form(f)}}
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /row -->
+
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- /container -->
+                        </div>
+                    </div>
+                    <div class="hero_single inner_pages_2 background-image" data-background="{{ asset('url(img/hero_submit_perso.jpg')}}">
+                        <div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <!-- /box_general-->
+            <nav aria-label="...">
+                <ul class="pagination pagination-sm add_bottom_30">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="{{ asset('#') }}" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="{{ asset('#') }}">1</a></li>
+                    <li class="page-item"><a class="page-link" href="{{ asset('#') }}">2</a></li>
+                    <li class="page-item"><a class="page-link" href="{{ asset('#') }}">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="{{ asset('#') }}">Next</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /pagination-->
+        </div>
+        <!-- /container-fluid-->
+    </div>
+    <!-- /container-wrapper-->
+
+{% endblock %}
+
+{#
+<footer class="sticky-footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright © FOOGRA 2019</small>
+        </div>
+    </div>
+</footer>
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="{{ asset('#page-top') }}">
+    <i class="fa fa-angle-up"></i>
+</a>
+<!-- Logout Modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="{{ asset('login.html') }}">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap core JavaScript-->
+
+<script src="{{ asset('admin_section/vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('admin_section/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- Core plugin JavaScript-->
+<script src="{{ asset('admin_section/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+<!-- Page level plugin JavaScript-->
+<script src="{{ asset('admin_section/vendor/chart.js/Chart.min.js') }}"></script>
+<script src="{{ asset('admin_section/vendor/datatables/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('admin_section/vendor/datatables/dataTables.bootstrap4.js') }}"></script>
+<script src="{{ asset('admin_section/vendor/jquery.selectbox-0.2.js') }}"></script>
+<script src="{{ asset('admin_section/vendor/retina-replace.min.js') }}"></script>
+<script src="{{ asset('admin_section/vendor/jquery.magnific-popup.min.js') }}"></script>
+<!-- Custom scripts for all pages-->
+<script src="{{ asset('admin_section/js/admin.js') }}"></script>
+
+</body>
+</html>
+#}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

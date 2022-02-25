@@ -1,0 +1,101 @@
+{% extends 'base.html.twig' %}
+{% block title %} Ajouter Reservations {% endblock %}
+{% block main %}
+    <div class="hero_single version_2">
+        <div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
+            <div class="bg_gray pattern" id= "submit">
+                <div class="container margin_60_40">
+                    <div class="row justify-content-center" align="left">
+                        <div class="col-lg-5">
+                            <div class="text-center add_bottom_15">
+                                <h4>Ajouter une Reservation</h4>
+                            </div>
+                            <div id="message-register"></div>
+                            <form method="post" action="AdminAddR" id="register">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            {{ form_row(f.Date) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /row -->
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            {{ form_row(f.Heure) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /row -->
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            {{ form_row(f.Nbrpersonnes,{'label': 'Nbr Personnes' }) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /row -->
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            {{ form_row(f.Vip,{'label': 'VIP' }) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /row -->
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            {{ form_row(f.Nbrbebes,{'label': 'Nbr Bébés' }) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /row -->
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            {{ form_row(f.Statut,{'label': 'Statut' }) }}
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /row -->
+                                <div class="row ">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            {{ form_row(f.lieu,{'label': 'Lieu de Restauration' }) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /row -->
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            {{ form(f)}}
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /row -->
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /container -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
